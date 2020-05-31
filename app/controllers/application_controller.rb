@@ -40,5 +40,9 @@ class ApplicationController < Sinatra::Base
     name = params[:name]
     ingredients = params[:ingredients]
     cook_time = params[:cook_time]
+    @recipe = Recipe.find_by_id(id)
+    @recipe.name = name
+    @recipe.ingredients = ingredients
+    @recipe.cook_time = cook_time
   end
 end
