@@ -44,5 +44,6 @@ class ApplicationController < Sinatra::Base
     @recipe.name = name
     @recipe.ingredients = ingredients
     @recipe.cook_time = cook_time
+    @recipe.save
   end
 end
