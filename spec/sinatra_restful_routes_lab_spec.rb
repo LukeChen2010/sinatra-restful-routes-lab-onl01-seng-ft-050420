@@ -45,8 +45,9 @@ describe "Recipe App" do
     it 'responds with a 200 status code' do
       expect(page.status_code).to eq(200)
     end
-    puts page.body
+
     it "displays the recipe's name" do
+      puts page.body
       expect(page.body).to include(recipe_name)
     end
 
