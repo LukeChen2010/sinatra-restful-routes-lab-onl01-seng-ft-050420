@@ -47,7 +47,6 @@ describe "Recipe App" do
     end
 
     it "displays the recipe's name" do
-      puts page.body
       expect(page.body).to include(recipe_name)
     end
 
