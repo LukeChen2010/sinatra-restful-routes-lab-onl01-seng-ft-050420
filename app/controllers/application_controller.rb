@@ -30,6 +30,6 @@ class ApplicationController < Sinatra::Base
     name = params[:name]
     ingredients = params[:ingredients]
     cook_time = params[:cook_time]
-    @recipe = Recipe.create(name:, name, ingredients: ingredients, cook_time: cook_time)
+    @recipe = Recipe.create(name: name, ingredients: ingredients, cook_time: cook_time)
   end
 end
