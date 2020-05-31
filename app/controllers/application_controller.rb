@@ -10,6 +10,10 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
   
+  get '/recipes/new' do
+    erb :new
+  end
+  
   get '/recipes/:id' do
     id = params[:id]
     @recipe = Recipe.find_by_id(id)
@@ -20,10 +24,6 @@ class ApplicationController < Sinatra::Base
     id = params[:id]
     @recipe = Recipe.find_by_id(id)
     erb :edit
-  end
-  
-  get '/recipes/new' do
-    erb :new
   end
   
   post '/recipes' do
