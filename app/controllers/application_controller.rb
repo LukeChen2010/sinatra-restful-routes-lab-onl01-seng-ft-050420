@@ -5,5 +5,14 @@ class ApplicationController < Sinatra::Base
   end
 
   # code actions here!
-
+  
+  get '/recipes' do
+    erb :index
+  end
+  
+  get 'recipes/:id' do
+    #id = params[:id]
+    #@recipe = Recipe.find(id)
+    erb :recipe
+  end
 end
